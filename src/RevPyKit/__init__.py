@@ -1,1 +1,1 @@
-import RevPyKit
+from . import RevPyKit
