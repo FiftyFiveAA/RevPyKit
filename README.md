@@ -14,6 +14,15 @@ RevPyKit is a reverse engineering toolkit written in Python. It is an extendable
 ```
 python -m pip install PyQt6
 ```
+You can either install via pip (https://pypi.org/project/RevPyKit/)
+```
+python -m pip install RevPyKit
+```
+```
+import RevPyKit
+RevPyKit.RevPyKit.launch()
+```
+or
 * Download this repo and run RevPyKit.py. The UI should show up.
 ```
 python RevPyKit.py
