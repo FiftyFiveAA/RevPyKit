@@ -2,9 +2,16 @@ import PyQt6.QtCore as QtCore
 import PyQt6.QtWidgets as QtWidgets
 import PyQt6.QtGui as QtGui
 
-import tab1_Analysis
-import tab2_HexEditor
-import tab3_Example
+try:
+    from . import tab1_Analysis
+    from . import tab2_HexEditor
+    from . import tab3_Example
+except:
+    import tab1_Analysis
+    import tab2_HexEditor
+    import tab3_Example
+
+from importlib import resources
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -53,7 +60,11 @@ class MainWindow(QtWidgets.QMainWindow):
         # set the default window size
         self.resize(1080, 720)
         # Add an icon for the program
-        self.setWindowIcon(QtGui.QIcon("images/55aa.png"))
+        try:
+            self.setWindowIcon(QtGui.QIcon(str(resources.files("RevPyKit")) + "\\images\\55aa.png"))
+        except:
+            self.setWindowIcon(QtGui.QIcon("images/55aa.png"))
+        
         # Show the UI window
         self.show()
 
@@ -105,6 +116,14 @@ class Color(QtWidgets.QWidget):
         
 
 if(__name__ == "__main__"):
+    app = QtWidgets.QApplication([])
+    app.setStyle("Fusion")
+
+    window = MainWindow()
+
+    app.exec()
+
+def launch():
     app = QtWidgets.QApplication([])
     app.setStyle("Fusion")
 
