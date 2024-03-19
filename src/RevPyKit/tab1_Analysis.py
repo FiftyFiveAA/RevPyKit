@@ -5,7 +5,12 @@ import hashlib
 import datetime
 import os
 import json
-from tab1_Analysis_PE import analyzePE
+try:
+    from .tab1_Analysis_PE import analyzePE
+except:
+    from tab1_Analysis_PE import analyzePE
+
+from importlib import resources
 
 def tab1_Analysis(self):
     ### left layout
