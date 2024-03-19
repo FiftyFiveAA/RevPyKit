@@ -3,9 +3,9 @@
 ## Overview
 RevPyKit is a reverse engineering toolkit written in Python. It is an extendable platform which currently supports hashing, file signature detection, string searches, hex editing, and Windows PE analysis. Output from the tool is displayed in the UI (created using PyQt6) and saved to a "output" folder for further analysis (primarily .json & .txt files). 
 
-![image](https://github.com/FiftyFiveAA/RevPyKit/assets/90160593/5b42dc5b-9d18-49d8-a2ec-c5e9e2d44c6f)
+![image](https://github.com/FiftyFiveAA/RevPyKit/assets/90160593/5d2e4adf-8461-4663-9053-fd61d1f6f2df)
 
-![image](https://github.com/FiftyFiveAA/RevPyKit/assets/90160593/56876c60-441d-4111-a34d-fefa7a8cf6af)
+![image](https://github.com/FiftyFiveAA/RevPyKit/assets/90160593/0b4d8c75-1354-4f6e-b54f-b3279f87c95f)
 
 ## Installation
 
