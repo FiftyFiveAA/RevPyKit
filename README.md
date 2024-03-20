@@ -10,14 +10,15 @@ RevPyKit is a reverse engineering toolkit written in Python. It is an extendable
 ## Installation
 
 * Install python 3.*
-* Install the PyQt6 module
+* Install the PyQt6 module.
 ```
 python -m pip install PyQt6
 ```
-You can either install via pip (https://pypi.org/project/RevPyKit/)
+You can either install via pip (https://pypi.org/project/RevPyKit/).
 ```
 python -m pip install RevPyKit
 ```
+and include the following in your Python script:
 ```
 import RevPyKit
 RevPyKit.RevPyKit.launch()
@@ -27,6 +28,9 @@ or
 ```
 python RevPyKit.py
 ```
+
+## Usage
+In the top left corner select File->Open and select any file. Click the "Analyze" button to dump information on the file. If you select a Windows Portable Executable or DLL then extra information will be shown in the top right panel. Strings can be extracted from the file using the bottom panel. To patch bytes in the file use the "Hex Editor" tab.
 
 ## Code Layout/Design Decisions
 Since this application is intended for reverse engineering I wanted to prioritize user control over automation. What this means practically is that RevPyKit won't automagically perform actions in the background. For example, when you open a file it will not automatically be analyzed. You have to click the "Analyze" button for that. The strings will not automatically be extracted, you have to click the "Extract Strings from File" button. You get the idea. Although this may be a slight annoyance, the hope is that full user control is worth an extra couple button clicks.
